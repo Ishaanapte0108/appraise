@@ -46,7 +46,15 @@ def modify(self, dt):
         frappe.throw(str(e))
 
 def delete(self):
-    try:        
+    
+    roles = frappe.get_roles(frappe.session.user)
+    is_admin = True if 'Administrator' in roles else False
+    is_system_manager = True if 'System Manager' in roles else False
+    
+    if self.approved == 1 and (not is_admin or not is_system_manager):
+        frappe.throw('Cannot delete document post approval')	
+
+    try:     
         frappe.delete_doc("Aggregator", self.name, ignore_permissions=True)
         frappe.db.commit()
     except Exception as e:

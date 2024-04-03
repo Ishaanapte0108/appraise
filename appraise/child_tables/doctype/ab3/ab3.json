@@ -1,0 +1,48 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "creation": "2024-04-03 19:57:29.918112",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "col1",
+    "col2",
+    "col3"
+  ],
+  "fields": [
+    {
+      "fieldname": "col1",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "No. of students Participated",
+      "options": "50 + (1.25)\nBetween 25 to 50 (1.0)\nBetween 16 to 24 (0.9)\nBetween 10 to 16 (0.8)"
+    },
+    {
+      "fieldname": "col2",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Activity Duration",
+      "options": "Two Weeks (1.75)\nOne Week (1.5)\nThree Days (1)\nTwo Days (0.8)\nOne Day (0.6)"
+    },
+    {
+      "fieldname": "col3",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Students' Feedback about Quality of the activity",
+      "options": "3.0+ (1)\nBetween 2.5 to 3.0 (0.8)\nBetween 2 to 2.5 (0.6)\nBelow 2 (0)"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "istable": 1,
+  "links": [],
+  "modified": "2024-04-03 19:57:29.918112",
+  "modified_by": "Administrator",
+  "module": "child_tables",
+  "name": "ab3",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "states": []
+}

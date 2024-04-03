@@ -6,6 +6,19 @@ app_email = "ishaan.apte@vit.edu.in"
 app_license = "mit"
 # required_apps = []
 
+
+import frappe
+#custom
+extend_bootinfo = "appraise.controllers.global_session_info.boot_session"
+
+#get_all_docs
+# docs = frappe.get_list('Bucket mapping', pluck = 'name')
+# for doc in docs:
+#   doctype_list_js = {
+#   "Certification for courses allotted" : "public/js/doctype_list.js"
+# }
+
+
 # Includes in <head>
 # ------------------
 
@@ -29,7 +42,6 @@ app_license = "mit"
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 

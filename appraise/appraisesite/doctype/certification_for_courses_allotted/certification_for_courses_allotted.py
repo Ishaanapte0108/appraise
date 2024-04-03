@@ -20,13 +20,7 @@ class Certificationforcoursesallotted(Document):
 	def validate(self):
 		validation.standard_validation(self)
 	
-	def on_trash(self):
-		roles = frappe.get_roles(frappe.session.user)
-		is_admin = True if 'Administrator' in roles else False
-		is_system_manager = True if 'System Manager' in roles else False
-		if self.approved == 1 and not is_admin:
-			frappe.throw('Cannot delete document post approval')	
-		
+	def on_trash(self):		
 		agg.delete(self)
 
 		

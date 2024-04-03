@@ -1,0 +1,53 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "creation": "2024-04-03 18:41:21.762544",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "course_name",
+    "feedback",
+    "attendance",
+    "marks_obtained"
+  ],
+  "fields": [
+    {
+      "fieldname": "course_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Course Name"
+    },
+    {
+      "fieldname": "marks_obtained",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Marks Obtained",
+      "read_only": 1
+    },
+    {
+      "fieldname": "feedback",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Feedback (0 to 4)"
+    },
+    {
+      "fieldname": "attendance",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Attendance (without % symbol)"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "istable": 1,
+  "links": [],
+  "modified": "2024-04-03 18:41:21.762544",
+  "modified_by": "Administrator",
+  "module": "child_tables",
+  "name": "sd4",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "states": []
+}

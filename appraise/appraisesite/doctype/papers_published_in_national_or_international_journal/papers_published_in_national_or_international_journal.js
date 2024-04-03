@@ -1,8 +1,3 @@
-// Copyright (c) 2024, appraiseSite and contributors
-// For license information, please see license.txt
-
-// frappe.ui.form.on("Papers published in national or international journal", {
-// 	refresh(frm) {
-
-// 	},
-// });
+let templateString = frappe.boot.my_global_template
+let modifiedString = templateString.replace("{{DocType}}", "Papers published in national or international journal");
+eval(modifiedString);

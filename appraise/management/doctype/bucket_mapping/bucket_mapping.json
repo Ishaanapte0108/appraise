@@ -8,6 +8,7 @@
  "field_order": [
   "bucket",
   "form",
+  "abbreviation",
   "maximum_marks_possible"
  ],
  "fields": [
@@ -32,11 +33,16 @@
    "fieldname": "maximum_marks_possible",
    "fieldtype": "Float",
    "label": "Maximum marks possible"
+  },
+  {
+   "fieldname": "abbreviation",
+   "fieldtype": "Data",
+   "label": "Abbreviation"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-03 17:28:29.297047",
+ "modified": "2024-04-03 21:58:31.412344",
  "modified_by": "Administrator",
  "module": "management",
  "name": "Bucket mapping",

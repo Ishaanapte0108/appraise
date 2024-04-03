@@ -1,7 +1,7 @@
 {
   "actions": [],
   "allow_rename": 1,
-  "creation": "2024-04-03 21:45:04.151548",
+  "creation": "2024-04-03 22:03:58.016359",
   "doctype": "DocType",
   "engine": "InnoDB",
   "field_order": [
@@ -24,13 +24,29 @@
     "column_break_sbus",
     "link_for_evidence",
     "section_break_aies",
-    "criteria_table"
+    "col1",
+    "column_break_mxjc",
+    "num1",
+    "column_break_fnza",
+    "m1",
+    "section_break_rail",
+    "col2",
+    "column_break_mynp",
+    "num2",
+    "column_break_onqz",
+    "m2",
+    "section_break_cymj",
+    "col3",
+    "column_break_cgcc",
+    "num3",
+    "column_break_wjud",
+    "m3"
   ],
   "fields": [
     {
       "fieldname": "html_rfgs",
       "fieldtype": "HTML",
-      "options": "<p class=\"font-weight-bold\">Research Bucket 2</p>\n<p class=\"font-weight-normal\">\nPoints represented in parenthesis are weightages for each option.<br>Self appraisal score is sum of marks obtained</p>\n\n<p class=\"font-italic\">Maximum marks possible are 586</p>"
+      "options": "<p class=\"font-weight-bold\">Corporate training and consultancy bucket 2</p>\n<p class=\"font-weight-normal\">\nPoints represented in parenthesis are weightages for each option.</p>\n\n<p class=\"font-italic\">Maximum marks possible are 120</p>"
     },
     {
       "fieldname": "section_break_qe0e",
@@ -137,18 +153,102 @@
       "fieldtype": "Section Break"
     },
     {
-      "fieldname": "criteria_table",
-      "fieldtype": "Table",
-      "label": "Criteria table",
-      "options": "rb2"
+      "fieldname": "col1",
+      "fieldtype": "HTML",
+      "options": "<p>Expert for AICTE / NBA/NAAC /UGC</p>"
+    },
+    {
+      "fieldname": "column_break_mxjc",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "description": "50 points per appointment",
+      "fieldname": "num1",
+      "fieldtype": "Int",
+      "label": "Number of appointments",
+      "non_negative": 1,
+      "options": "Individual Consultancy (1.5)\nConvenor/PI(1)\nCo-Convenor /Co-PI(0.8) d.\nOrganizing Secretary (0.6)\nMember (0.3)"
+    },
+    {
+      "fieldname": "column_break_fnza",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "m1",
+      "fieldtype": "Read Only",
+      "label": "Marks"
+    },
+    {
+      "fieldname": "section_break_rail",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "col2",
+      "fieldtype": "HTML",
+      "label": "Expert for DTE/ University",
+      "options": "<p>Expert for DTE/ University</p>"
+    },
+    {
+      "fieldname": "column_break_mynp",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "description": "40 points per appointment",
+      "fieldname": "num2",
+      "fieldtype": "Int",
+      "label": "Number of appointments",
+      "non_negative": 1,
+      "options": "Individual Consultancy (1.5)\nConvenor/PI(1)\nCo-Convenor /Co-PI(0.8) d.\nOrganizing Secretary (0.6)\nMember (0.3)"
+    },
+    {
+      "fieldname": "column_break_onqz",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "m2",
+      "fieldtype": "Read Only",
+      "label": "Marks"
+    },
+    {
+      "fieldname": "section_break_cymj",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "col3",
+      "fieldtype": "HTML",
+      "options": "<p>Academic council / BOS of any other Institute/ IQAC committee of other Institute </p>"
+    },
+    {
+      "fieldname": "column_break_cgcc",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "description": "30 points per appointment",
+      "fieldname": "num3",
+      "fieldtype": "Int",
+      "label": "Number of appointments",
+      "non_negative": 1,
+      "options": "Individual Consultancy (1.5)\nConvenor/PI(1)\nCo-Convenor /Co-PI(0.8) d.\nOrganizing Secretary (0.6)\nMember (0.3)"
+    },
+    {
+      "fieldname": "column_break_wjud",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "m3",
+      "fieldtype": "Read Only",
+      "label": "Marks"
     }
   ],
   "index_web_pages_for_search": 1,
   "links": [],
-  "modified": "2024-04-03 21:45:04.151548",
+  "modified": "2024-04-03 22:03:58.016359",
   "modified_by": "Administrator",
   "module": "appraiseSite",
-  "name": "Papers published in national or international journal",
+  "name": "Expert for reputed committee",
   "owner": "Administrator",
   "permissions": [
     {

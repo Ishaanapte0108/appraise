@@ -1,7 +1,7 @@
 {
   "actions": [],
   "allow_rename": 1,
-  "creation": "2024-04-03 21:45:04.151548",
+  "creation": "2024-04-03 21:51:08.468988",
   "doctype": "DocType",
   "engine": "InnoDB",
   "field_order": [
@@ -30,7 +30,7 @@
     {
       "fieldname": "html_rfgs",
       "fieldtype": "HTML",
-      "options": "<p class=\"font-weight-bold\">Research Bucket 2</p>\n<p class=\"font-weight-normal\">\nPoints represented in parenthesis are weightages for each option.<br>Self appraisal score is sum of marks obtained</p>\n\n<p class=\"font-italic\">Maximum marks possible are 586</p>"
+      "options": "<p class=\"font-weight-bold\">Research Bucket 3</p>\n<p class=\"font-weight-normal\">\nPoints represented in parenthesis are weightages for each option.<br>Self appraisal score is sum of marks obtained</p>\n\n<p class=\"font-italic\">Maximum marks possible are 195</p>"
     },
     {
       "fieldname": "section_break_qe0e",
@@ -140,15 +140,15 @@
       "fieldname": "criteria_table",
       "fieldtype": "Table",
       "label": "Criteria table",
-      "options": "rb2"
+      "options": "rb3"
     }
   ],
   "index_web_pages_for_search": 1,
   "links": [],
-  "modified": "2024-04-03 21:45:04.151548",
+  "modified": "2024-04-03 21:51:08.468988",
   "modified_by": "Administrator",
   "module": "appraiseSite",
-  "name": "Papers published in national or international journal",
+  "name": "Fellowship received for national or international conference",
   "owner": "Administrator",
   "permissions": [
     {

@@ -1,7 +1,7 @@
 {
   "actions": [],
   "allow_rename": 1,
-  "creation": "2024-04-03 21:45:04.151548",
+  "creation": "2024-04-03 22:02:07.308456",
   "doctype": "DocType",
   "engine": "InnoDB",
   "field_order": [
@@ -24,13 +24,14 @@
     "column_break_sbus",
     "link_for_evidence",
     "section_break_aies",
-    "criteria_table"
+    "col1",
+    "col2"
   ],
   "fields": [
     {
       "fieldname": "html_rfgs",
       "fieldtype": "HTML",
-      "options": "<p class=\"font-weight-bold\">Research Bucket 2</p>\n<p class=\"font-weight-normal\">\nPoints represented in parenthesis are weightages for each option.<br>Self appraisal score is sum of marks obtained</p>\n\n<p class=\"font-italic\">Maximum marks possible are 586</p>"
+      "options": "<p class=\"font-weight-bold\">Corporate training and consultancy bucket 1</p>\n<p class=\"font-weight-normal\">\nPoints represented in parenthesis are weightages for each option.</p>\n\n<p class=\"font-italic\">Maximum marks possible are 843</p>"
     },
     {
       "fieldname": "section_break_qe0e",
@@ -137,18 +138,24 @@
       "fieldtype": "Section Break"
     },
     {
-      "fieldname": "criteria_table",
-      "fieldtype": "Table",
-      "label": "Criteria table",
-      "options": "rb2"
+      "fieldname": "col1",
+      "fieldtype": "Select",
+      "label": "Amount of revenue",
+      "options": "Above 1 lakh (1.5)\nUp to 1 lakh (1.25)\nUp to 50 K (1)\nUp to 25 K (0.8)\n5K to 25 K (0.5)\nBelow 5K (0)"
+    },
+    {
+      "fieldname": "col2",
+      "fieldtype": "Select",
+      "label": "Individual consultancy / position in team ",
+      "options": "Individual Consultancy (1.5)\nConvenor/PI(1)\nCo-Convenor /Co-PI(0.8)\nOrganizing Secretary (0.6)\nMember (0.3)"
     }
   ],
   "index_web_pages_for_search": 1,
   "links": [],
-  "modified": "2024-04-03 21:45:04.151548",
+  "modified": "2024-04-03 22:02:07.308456",
   "modified_by": "Administrator",
   "module": "appraiseSite",
-  "name": "Papers published in national or international journal",
+  "name": "Internal revenue generation",
   "owner": "Administrator",
   "permissions": [
     {

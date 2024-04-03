@@ -1,0 +1,192 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-01 14:03:42.560927",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "html_rfgs",
+  "column_break_hpsk",
+  "professor",
+  "designation",
+  "section_break_uihc",
+  "academic_year",
+  "department",
+  "column_break_vbeg",
+  "semester",
+  "reviewer",
+  "section_break_qe0e",
+  "reviewer_score",
+  "column_break_hvfs",
+  "approved",
+  "section_break_ifut",
+  "self_appraisal_score",
+  "column_break_sbus",
+  "link_for_evidence",
+  "section_break_aies",
+  "platform_type",
+  "number_of_hours",
+  "assessment_outcome",
+  "date_of_cerftification"
+ ],
+ "fields": [
+  {
+   "fieldname": "html_rfgs",
+   "fieldtype": "HTML",
+   "options": "<p class=\"font-weight-bold\">Academic Involvement 1</p>\n<p class=\"font-weight-normal\">\nPoints represented in parenthesis are weightages for each option.<br>Self appraisal score is product of applicable weightages</p>\n\n<p class=\"font-italic\">Maximum marks possible are 150</p>"
+  },
+  {
+   "fieldname": "section_break_qe0e",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hvfs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "depends_on": "approved",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_ifut",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Float",
+   "label": "Self Appraisal Score",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sbus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "depends_on": "self_appraisal_score",
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Attach",
+   "label": "Link for evidence"
+  },
+  {
+   "fieldname": "column_break_hpsk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Faculty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_uihc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic Year",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vbeg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "label": "Semester",
+   "options": "Odd\nEven",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Reviewer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_aies",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "platform_type",
+   "fieldtype": "Select",
+   "label": "Platform type",
+   "options": "Professor/Industry Expert of National/International repute (1.5)\nProfessor from State college (1)\nAny other (0.4)"
+  },
+  {
+   "fieldname": "number_of_hours",
+   "fieldtype": "Select",
+   "label": "Number Of Hours",
+   "options": "30 plus hours (1)\n20 plus hours (0.5)\nBelow 20 hours (0)"
+  },
+  {
+   "fieldname": "assessment_outcome",
+   "fieldtype": "Select",
+   "label": "Assessment Outcome",
+   "options": "Grade B or Above (1)\nPass (0.4)\nAudit (0.2)\nFail (0)"
+  },
+  {
+   "fieldname": "date_of_cerftification",
+   "fieldtype": "Select",
+   "label": "Date Of Cerftification",
+   "options": "2 years (1)\n2 to 4 years (0.75)\n4 to 6 years (0.4)\nMore than 6 years (0)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-01 19:59:56.608852",
+ "modified_by": "Administrator",
+ "module": "appraiseSite",
+ "name": "Certification for courses allotted",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "professor"
+}

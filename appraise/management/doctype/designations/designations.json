@@ -1,40 +1,27 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:abbreviation",
- "creation": "2024-03-30 19:32:57.188814",
+ "autoname": "field:designation",
+ "creation": "2024-04-01 11:57:37.556590",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "department_name",
-  "abbreviation",
-  "reviewer"
+  "designation"
  ],
  "fields": [
   {
-   "fieldname": "department_name",
+   "fieldname": "designation",
    "fieldtype": "Data",
-   "label": "Department name"
-  },
-  {
-   "fieldname": "abbreviation",
-   "fieldtype": "Data",
-   "label": "Abbreviation",
+   "label": "Designation",
    "unique": 1
-  },
-  {
-   "fieldname": "reviewer",
-   "fieldtype": "Link",
-   "label": "Reviewer",
-   "options": "User"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-01 17:15:45.754620",
+ "modified": "2024-04-01 14:01:55.083133",
  "modified_by": "Administrator",
  "module": "management",
- "name": "Department",
+ "name": "Designations",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
@@ -61,15 +48,6 @@
    "role": "trustee",
    "share": 1,
    "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "employee",
-   "share": 1
   }
  ],
  "sort_field": "creation",

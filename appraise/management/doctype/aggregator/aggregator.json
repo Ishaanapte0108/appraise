@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name1",
+ "creation": "2024-04-01 18:55:11.052985",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "document_type",
+  "form_owner",
+  "full_name",
+  "department",
+  "designation",
+  "approved",
+  "column_break_xhfy",
+  "bucket",
+  "academic_year",
+  "semester",
+  "self_appraisal_score",
+  "approved_score",
+  "reviewer"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "label": "Document Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "form_owner",
+   "fieldtype": "Data",
+   "label": "Form Owner"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designations"
+  },
+  {
+   "fieldname": "column_break_xhfy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bucket",
+   "fieldtype": "Data",
+   "label": "Bucket"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic Year"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Data",
+   "label": "Semester"
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Float",
+   "label": "Self appraisal score"
+  },
+  {
+   "fieldname": "approved_score",
+   "fieldtype": "Data",
+   "label": "Approved Score"
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Data",
+   "label": "Reviewer"
+  },
+  {
+   "default": "0",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-01 22:20:58.393756",
+ "modified_by": "Administrator",
+ "module": "management",
+ "name": "Aggregator",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "trustee",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

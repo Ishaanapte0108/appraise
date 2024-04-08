@@ -1,9 +1,59 @@
-# Copyright (c) 2024, appraiseSite and contributors
-# For license information, please see license.txt
-
-# import frappe
+import frappe
 from frappe.model.document import Document
+import appraise.controllers.form_validation as validation
+import appraise.controllers.aggregatorController as agg
+import re
 
+Doctype = 'Service to community through product development'
+pattern_for_wtg = r'\((\s*(?:\d+\.\d+|\d+)\s*)\)'
 
 class Servicetocommunitythroughproductdevelopment(Document):
-	pass
+    
+    """method to autoname your document"""
+    def autoname(self):
+        self.name = f'PDB2_{self.owner}_{self.academic_year}_{self.semester}'
+    
+    def before_save(self):
+        self.self_appraisal_score = compute_marks(self)
+        agg.modify(self, Doctype)
+
+    def validate(self):
+        validation.standard_validation(self)
+ 
+
+    def on_trash(self):
+        agg.delete(self)
+
+def compute_marks(self):
+    
+    counter = 0
+    pas = []
+
+    for item in self.criteria_table:
+        if counter >= 1:
+            frappe.throw('Can only have one entry in the table')
+        else:
+            counter += 1
+
+            match = re.search(pattern_for_wtg, item.col1)
+            if match:
+                val1 = float(match.group(1).strip())
+            else:
+                frappe.throw('Error Fetching Field Weightages')
+
+            match = re.search(pattern_for_wtg, item.col2)
+            if match:
+                val2 = float(match.group(1).strip())
+            else:
+                frappe.throw('Error Fetching Field Weightages')
+
+            marks_obtained = (val1 + val2) * 400
+            item.col3 = marks_obtained
+
+            pas.append(marks_obtained)
+    
+    final_sum = sum(pas)
+    if final_sum > 1200:
+        return 1200
+    else:
+        return round(final_sum)

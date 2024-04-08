@@ -11,7 +11,7 @@ pattern_for_wtg = r'\((\s*(?:\d+\.\d+|\d+)\s*)\)'
 class Paperspublishedinnationalorinternationaljournal(Document):
     """method to autoname your document"""
     def autoname(self):
-        self.name = f'RB2_{self.professor}_{self.academic_year}_{self.semester}'
+        self.name = f'RB2_{self.owner}_{self.academic_year}_{self.semester}'
     
     def before_save(self):
         self.self_appraisal_score = compute_marks(self)

@@ -10,7 +10,7 @@ pattern_for_wtg = r'\((\s*(?:\d+\.\d+|\d+)\s*)\)'
 class CourseResult(Document):
     """method to autoname your document"""
     def autoname(self):
-        self.name = f'SD2_{self.professor}_{self.academic_year}_{self.semester}'
+        self.name = f'SD2_{self.owner}_{self.academic_year}_{self.semester}'
     
     def before_save(self):
         self.self_appraisal_score = computemarks(self)

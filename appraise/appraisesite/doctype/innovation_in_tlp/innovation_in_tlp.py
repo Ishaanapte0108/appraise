@@ -4,7 +4,7 @@ import appraise.controllers.form_validation as validation
 import appraise.controllers.aggregatorController as agg
 import re
 
-Doctype = 'Innovation in TLP	'
+Doctype = 'Innovation in TLP'
 pattern_for_wtg = r'\((\s*(?:\d+\.\d+|\d+)\s*)\)'
 
 class InnovationinTLP(Document):

@@ -11,6 +11,16 @@ import frappe
 #custom
 extend_bootinfo = "appraise.controllers.global_session_info.boot_session"
 
+app_include_js = [
+    "https://cdn.jsdelivr.net/npm/chart.js",
+]
+app_include_css = [
+    "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css",
+]
+website_context = {
+	"favicon": "/assets/bytenba/finalAppraiseLogo.png",
+	"splash_image": "/assets/bytenba/finalAppraiseLogo.png",
+}
 #get_all_docs
 # docs = frappe.get_list('Bucket mapping', pluck = 'name')
 # for doc in docs:

@@ -18,8 +18,8 @@ app_include_css = [
     "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css",
 ]
 website_context = {
-	"favicon": "/assets/bytenba/finalAppraiseLogo.png",
-	"splash_image": "/assets/bytenba/finalAppraiseLogo.png",
+	"favicon": "/assets/appraise/frappe.png",
+	"splash_image": "/assets/appraise/frappe.png",
 }
 #get_all_docs
 # docs = frappe.get_list('Bucket mapping', pluck = 'name')

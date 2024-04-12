@@ -11,7 +11,7 @@ class InstitutionalGovernanceResponsibilities(Document):
 	
 	"""method to autoname your document"""
 	def autoname(self):
-		self.name = f'AB7_{self.owner}_{self.academic_year}_{self.semester}'
+		self.name = f'AI6_{self.owner}_{self.academic_year}_{self.semester}'
 	
 	def before_save(self):
 		self.self_appraisal_score = round(compute_marks(self))

@@ -19,8 +19,9 @@ app_include_css = [
 ]
 website_context = {
 	"favicon": "/assets/appraise/frappe.png",
-	"splash_image": "/assets/appraise/frappe.png",
+	"splash_image": "/assets/appraise/frappe.png"
 }
+
 #get_all_docs
 # docs = frappe.get_list('Bucket mapping', pluck = 'name')
 # for doc in docs:

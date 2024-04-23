@@ -19,7 +19,7 @@ def modify(self, dt):
             "academic_year": self.academic_year,
             "semester": self.semester,
             "self_appraisal_score": self.self_appraisal_score,
-            "approved_score": self.reviewer_score,
+            "approved_score": float(self.reviewer_score),
             "reviewer": self.reviewer
         })
     else:        
@@ -36,7 +36,7 @@ def modify(self, dt):
             "academic_year": self.academic_year,
             "semester": self.semester,
             "self_appraisal_score": self.self_appraisal_score,
-            "approved_score": self.reviewer_score,
+            "approved_score": float(self.reviewer_score),
             "reviewer": self.reviewer
         })
     try:

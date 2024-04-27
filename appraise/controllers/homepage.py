@@ -72,3 +72,59 @@ def get_professor_info():
   } 
 
   return data
+
+@frappe.whitelist()
+def get_reviewer_info():
+  
+  data = {}
+  
+  session_user = frappe.session.user
+  user_info = frappe.get_doc('User', session_user)
+  dept = user_info.department
+
+  metadata = frappe.get_doc('Academic Year and Semester')
+  ay = metadata.academic_year
+  sem = metadata.semester
+  
+  data['ay'] = ay
+  data['sem'] = sem
+
+
+  total_forms_submitted = """SELECT full_name, designation, approved, self_appraisal_score, approved_score  FROM `tabAggregator` WHERE academic_year = '{ay}' and semester = '{sem}' and department =  '{dept}'""".format(ay = ay, sem = sem, dept = dept)
+  info = frappe.db.sql(total_forms_submitted)
+  df = pd.DataFrame(info, columns = ['full_name', 'designation', 'approved', 'self_appraisal_score', 'approved_score'])
+
+  data['total_forms_submitted'] = len(df)
+  
+
+  total_forms_approved = df['approved'].sum()
+  data['tfa'] = int(total_forms_approved)
+
+  
+  total_self_appraisal_score = df['self_appraisal_score'].sum()
+  data['total_self_appraisal_score'] = total_self_appraisal_score
+
+  
+  df['approved_score'] = df['approved_score'].astype(float)
+  total_approved_score = df['approved_score'].sum()
+  data['total_approved_score']   = total_approved_score
+
+
+  bucket_info = frappe.db.get_list('Bucket mapping', fields = ["name", "bucket", "abbreviation", "maximum_marks_possible"], as_list=True, ignore_permissions = True)  
+  bucket_df = pd.DataFrame(bucket_info, columns=["form_name", "bucket", "abbreviation", "maximum_marks_possible"])
+
+  total_active_prof = """SELECT count(*) FROM  tabUser WHERE department = '{dept}'""".format(dept = dept)
+  total_active_prof = int(frappe.db.sql(total_active_prof, as_list = 1)[0][0])
+
+  data['total_froms_expected'] = len(bucket_df)*total_active_prof
+
+  data['max_score_possible'] = bucket_df['maximum_marks_possible'].sum()
+
+  return data
+
+
+  
+
+
+
+

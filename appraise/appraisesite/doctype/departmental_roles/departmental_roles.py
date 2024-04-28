@@ -15,6 +15,7 @@ class DepartmentalRoles(Document):
 	
 	def before_save(self):
 		self.self_appraisal_score = compute_marks(self)
+		agg.modify(self, Doctype)
 
 	def on_trash(self):
         # Create on_trash method if not exists and call the delete method from aggregatorController

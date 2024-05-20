@@ -32,7 +32,7 @@ frappe.query_reports["Abstract"] = {
 		"fieldtype": "Select",
 		"label": "Designation",
 		"mandatory": 0,
-		"options": "\nProfessor\nAssistant Professor\nAssociate Professor",
+		"options": "\nProfessor\nAssistant professor\nAssociate Professor",
 		"wildcard_filter": 0
 		},
 		{

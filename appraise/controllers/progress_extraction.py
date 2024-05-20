@@ -27,7 +27,7 @@ def get_forms(bucket):
         nums_list.extend(nums)
     
     # Convert the extracted numeric values to floats
-    nums_list = [float(num) for num in nums_list]
+    nums_list = [float(num) for num in nums_list] # list_comprehension
     
     # Add nums_list as a new column to merged_df
     bucket_df['nums_list'] = nums_list
